@@ -18,6 +18,10 @@ import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.LineGraphSeries;
+
 
 public class MainActivity extends Activity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
@@ -126,12 +130,21 @@ public class MainActivity extends Activity
         }
 
         public PlaceholderFragment() {
+
         }
 
         @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                Bundle savedInstanceState) {
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+            GraphView graph = (GraphView)rootView.findViewById(R.id.graph);
+            LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(new DataPoint[]{
+                    new DataPoint(0,1),
+                    new DataPoint(1,5),
+                    new DataPoint(2,3),
+                    new DataPoint(3,2),
+                    new DataPoint(4,6)
+            });
+            graph.addSeries(series);
             return rootView;
         }
 
