@@ -3,11 +3,12 @@
 
     <string name="app_name">ucla-cftm-app</string>
     <string name="title_section1">Dashboard</string>
-    <string name="title_section2">Find Friends</string>
-    <string name="title_section3">Options</string>
+    <string name="title_section2">Profile</string>
+    <string name="title_section3">Find Friends</string>
+    <string name="title_section4">Settings</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="action_example">Example action</string>
+    <string name="profile">Profile</string>
     <string name="action_settings">Settings</string>
 
 </resources>
