@@ -21,6 +21,7 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile (name:"GraphView-4.0.1", ext:"jar")
+    compile(name: "GraphView-4.0.1", ext: "jar")
     compile 'com.android.support:support-v4:20.0.0'
+
 }
